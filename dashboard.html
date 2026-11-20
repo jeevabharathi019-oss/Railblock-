@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RailBlock-AI | Main Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+            <div class="brand">
+
+                <div class="brand-logo">
+                    🚆
+                </div>
+
+                <div class="brand-text">
+                    <h2>RailBlock-AI</h2>
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+                <button class="nav-item active" data-page="dashboard">
+                    <span class="nav-icon">▦</span>
+                    <span>Main Dashboard</span>
+                </button>
+
+                <button class="nav-item" data-page="defects">
+                    <span class="nav-icon">⌁</span>
+                    <span>AI Defect Detection</span>
+                </button>
+
+                <button class="nav-item" data-page="cctv">
+                    <span class="nav-icon">▣</span>
+                    <span>CCTV Monitoring</span>
+                </button>
+
+                <button class="nav-item" data-page="timetable">
+                    <span class="nav-icon">◷</span>
+                    <span>Train Timetable</span>
+                </button>
+
+                <button class="nav-item" data-page="assets">
+                    <span class="nav-icon">⬡</span>
+                    <span>Assets / Track</span>
+                </button>
+
+                <button class="nav-item" data-page="planner">
+                    <span class="nav-icon">✣</span>
+                    <span>AI Block Planner</span>
+                </button>
+
+                <button class="nav-item" data-page="conflict">
+                    <span class="nav-icon">♢</span>
+                    <span>Conflict Detection</span>
+                </button>
+
+                <button class="nav-item" data-page="maintenance">
+                    <span class="nav-icon">⚒</span>
+                    <span>Maintenance</span>
+                </button>
+
+                <button class="nav-item" data-page="alerts">
+                    <span class="nav-icon">♧</span>
+                    <span>Alerts</span>
+                </button>
+
+                <button class="nav-item" data-page="network">
+                    <span class="nav-icon">⌘</span>
+                    <span>Network View</span>
+                </button>
+
+                <button class="nav-item" data-page="analytics">
+                    <span class="nav-icon">▥</span>
+                    <span>Analytics</span>
+                </button>
+
+                <button class="nav-item" data-page="impact">
+                    <span class="nav-icon">♙</span>
+                    <span>Impact Dashboard</span>
+                </button>
+
+                <button class="nav-item" data-page="reports">
+                    <span class="nav-icon">▤</span>
+                    <span>Reports</span>
+                </button>
+
+                <button class="nav-item" data-page="demo">
+                    <span class="nav-icon">◉</span>
+                    <span>Live Demo Mode</span>
+                </button>
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- =====================================================
+             MAIN CONTENT
+        ====================================================== -->
+
+        <div class="main-container">
+
+
+            <!-- TOP HEADER -->
+
+            <header class="top-header">
+
+                <div>
+
+                    <h1 id="pageTitle">
+                        Main Dashboard
+                    </h1>
+
+                    <p id="pageSubtitle">
+                        Railway operations overview
+                    </p>
+
+                </div>
+
+
+                <div class="header-right">
+
+                    <!-- NOTIFICATION -->
+
+                    <button
+                        class="notification-button"
+                        id="notificationButton"
+                    >
+
+                        ♧
+
+                        <span class="notification-count">
+                            8
+                        </span>
+
+                    </button>
+
+
+                    <!-- USER / ACCOUNT -->
+
+                    <button class="profile-button" id="profileButton" title="Manage account">
+                        <img id="headerProfileImage" class="header-avatar hidden" alt="Profile">
+                        <span id="headerAvatarFallback">👤</span>
+                    </button>
+
+                    <div class="user-info">
+
+                        <strong id="username">
+                            santhosh_santa
+                        </strong>
+
+                        <span id="userRole">
+                            System Admin
+                        </span>
+
+                    </div>
+
+
+                    <!-- LOGOUT -->
+
+                    <button
+                        class="logout-button"
+                        id="logoutButton"
+                    >
+                        Logout
+                    </button>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+            ================================================== -->
+
+            <main class="content">
+
+
+                <!-- =================================================
+                     DASHBOARD PAGE
+                ================================================== -->
+
+                <section
+                    id="dashboardPage"
+                    class="page active-page"
+                >
+
+
+                    <!-- =================================================
+                         STAT CARDS
+                    ================================================== -->
+
+                    <div class="stats-grid">
+
+
+                        <!-- ACTIVE TRAINS -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon blue">
+                                ♙
+                            </div>
+
+                            <div class="stat-number">
+                                12
+                            </div>
+
+                            <div class="stat-label">
+                                Active Trains
+                            </div>
+
+                        </div>
+
+
+                        <!-- OPEN DEFECTS -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon red">
+                                ⚠
+                            </div>
+
+                            <div class="stat-number">
+                                8
+                            </div>
+
+                            <div class="stat-label">
+                                Open Defects
+                            </div>
+
+                        </div>
+
+
+                        <!-- ACTIVE BLOCKS -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon orange">
+                                ▥
+                            </div>
+
+                            <div class="stat-number">
+                                3
+                            </div>
+
+                            <div class="stat-label">
+                                Active Blocks
+                            </div>
+
+                        </div>
+
+
+                        <!-- PENDING MAINTENANCE -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon purple">
+                                ⚒
+                            </div>
+
+                            <div class="stat-number">
+                                8
+                            </div>
+
+                            <div class="stat-label">
+                                Pending Maintenance
+                            </div>
+
+                        </div>
+
+
+                        <!-- CONFLICTS -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon orange-red">
+                                ♢
+                            </div>
+
+                            <div class="stat-number">
+                                2
+                            </div>
+
+                            <div class="stat-label">
+                                Conflicts
+                            </div>
+
+                        </div>
+
+
+                        <!-- RESOLVED -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon green">
+                                ✓
+                            </div>
+
+                            <div class="stat-number">
+                                4
+                            </div>
+
+                            <div class="stat-label">
+                                Resolved Issues
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         SECTION STATUS + ALERTS
+                    ================================================== -->
+
+                    <div class="dashboard-grid">
+
+
+                        <!-- SECTION STATUS -->
+
+                        <div class="card section-status-card">
+
+                            <div class="card-header">
+
+                                <div>
+
+                                    <h2>
+                                        Section Status Grid
+                                    </h2>
+
+                                    <p>
+                                        Live health of monitored railway sections
+                                    </p>
+
+                                </div>
+
+                                <span class="live-status">
+                                    ● LIVE
+                                </span>
+
+                            </div>
+
+
+                            <div class="section-grid">
+
+
+                                <!-- A12 -->
+
+                                <div class="section-item">
+
+                                    <strong>
+                                        A12
+                                    </strong>
+
+                                    <span>
+                                        Ghaziabad - Meerut Cantt
+                                    </span>
+
+                                    <b class="status critical">
+                                        CRITICAL
+                                    </b>
+
+                                </div>
+
+
+                                <!-- A13 -->
+
+                                <div class="section-item">
+
+                                    <strong>
+                                        A13
+                                    </strong>
+
+                                    <span>
+                                        Meerut Cantt - Muzaffar...
+                                    </span>
+
+                                    <b class="status warning">
+                                        WARNING
+                                    </b>
+
+                                </div>
+
+
+                                <!-- B21 -->
+
+                                <div class="section-item">
+
+                                    <strong>
+                                        B21
+                                    </strong>
+
+                                    <span>
+                                        Kanpur Central - Lucknow
+                                    </span>
+
+                                    <b class="status normal">
+                                        NORMAL
+                                    </b>
+
+                                </div>
+
+
+                                <!-- B22 -->
+
+                                <div class="section-item">
+
+                                    <strong>
+                                        B22
+                                    </strong>
+
+                                    <span>
+                                        Lucknow - Barabanki
+                                    </span>
+
+                                    <b class="status normal">
+                                        NORMAL
+                                    </b>
+
+                                </div>
+
+
+                                <!-- C05 -->
+
+                                <div class="section-item">
+
+                                    <strong>
+                                        C05
+                                    </strong>
+
+                                    <span>
+                                        Mughalsarai - Varanasi
+                                    </span>
+
+                                    <b class="status maintenance">
+                                        MAINTENANCE
+                                    </b>
+
+                                </div>
+
+
+                                <!-- C06 -->
+
+                                <div class="section-item">
+
+                                    <strong>
+                                        C06
+                                    </strong>
+
+                                    <span>
+                                        Varanasi - Gorakhpur
+                                    </span>
+
+                                    <b class="status normal">
+                                        NORMAL
+                                    </b>
+
+                                </div>
+
+
+                                <!-- D18 -->
+
+                                <div class="section-item">
+
+                                    <strong>
+                                        D18
+                                    </strong>
+
+                                    <span>
+                                        Chennai Central - Arakk...
+                                    </span>
+
+                                    <b class="status warning">
+                                        WARNING
+                                    </b>
+
+                                </div>
+
+
+                                <!-- D19 -->
+
+                                <div class="section-item">
+
+                                    <strong>
+                                        D19
+                                    </strong>
+
+                                    <span>
+                                        Arakkonam - Katpadi
+                                    </span>
+
+                                    <b class="status normal">
+                                        NORMAL
+                                    </b>
+
+                                </div>
+
+
+                                <!-- E09 -->
+
+                                <div class="section-item">
+
+                                    <strong>
+                                        E09
+                                    </strong>
+
+                                    <span>
+                                        Pune - Daund
+                                    </span>
+
+                                    <b class="status critical">
+                                        CRITICAL
+                                    </b>
+
+                                </div>
+
+
+                                <!-- E10 -->
+
+                                <div class="section-item">
+
+                                    <strong>
+                                        E10
+                                    </strong>
+
+                                    <span>
+                                        Daund - Solapur
+                                    </span>
+
+                                    <b class="status normal">
+                                        NORMAL
+                                    </b>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             ALERT FEED
+                        ================================================== -->
+
+                        <div class="card alerts-card">
+
+                            <div class="card-header">
+
+                                <div>
+
+                                    <h2>
+                                        Live Alerts Feed
+                                    </h2>
+
+                                    <p>
+                                        Latest system events
+                                    </p>
+
+                                </div>
+
+                                <button
+                                    class="clear-button"
+                                    id="clearAlerts"
+                                >
+                                    Clear
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="alerts-list"
+                                id="alertsList"
+                            >
+
+
+                                <div class="alert-item">
+
+                                    <div class="alert-top">
+
+                                        <span class="alert-badge critical">
+                                            CRITICAL
+                                        </span>
+
+                                        <small>
+                                            9:00:20 PM
+                                        </small>
+
+                                    </div>
+
+                                    <p>
+                                        Critical crack detected at Section A12,
+                                        Km 12+430 (94% confidence)
+                                    </p>
+
+                                </div>
+
+
+                                <div class="alert-item">
+
+                                    <div class="alert-top">
+
+                                        <span class="alert-badge critical">
+                                            CRITICAL
+                                        </span>
+
+                                        <small>
+                                            9:00:20 PM
+                                        </small>
+
+                                    </div>
+
+                                    <p>
+                                        Block BLK-2026-0001 conflicts with
+                                        train 12951 arrival window
+                                    </p>
+
+                                </div>
+
+
+                                <div class="alert-item">
+
+                                    <div class="alert-top">
+
+                                        <span class="alert-badge warning">
+                                            WARNING
+                                        </span>
+
+                                        <small>
+                                            9:00:20 PM
+                                        </small>
+
+                                    </div>
+
+                                    <p>
+                                        Maintenance job MJ-2026-0002 pending
+                                        controller approval &gt; 2h
+                                    </p>
+
+                                </div>
+
+
+                                <div class="alert-item">
+
+                                    <div class="alert-top">
+
+                                        <span class="alert-badge warning">
+                                            WARNING
+                                        </span>
+
+                                        <small>
+                                            9:00:20 PM
+                                        </small>
+
+                                    </div>
+
+                                    <p>
+                                        Abnormal rail wear flagged on
+                                        Section D18
+                                    </p>
+
+                                </div>
+
+
+                                <div class="alert-item">
+
+                                    <div class="alert-top">
+
+                                        <span class="alert-badge info">
+                                            INFO
+                                        </span>
+
+                                        <small>
+                                            8:58:12 PM
+                                        </small>
+
+                                    </div>
+
+                                    <p>
+                                        AI block planner generated a
+                                        low-impact maintenance window.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         TRAIN + BLOCK STATUS
+                    ================================================== -->
+
+                    <div class="bottom-grid">
+
+
+                        <!-- TRAIN STATUS -->
+
+                        <div class="card">
+
+                            <div class="card-header">
+
+                                <h2>
+                                    Train Status
+                                </h2>
+
+                                <button
+                                    class="view-button"
+                                    data-page-link="timetable"
+                                >
+                                    View all
+                                </button>
+
+                            </div>
+
+
+                            <div class="table-container">
+
+                                <table>
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>
+                                                TRAIN
+                                            </th>
+
+                                            <th>
+                                                PRIORITY
+                                            </th>
+
+                                            <th>
+                                                STATUS
+                                            </th>
+
+                                        </tr>
+
+                                    </thead>
+
+
+                                    <tbody>
+
+                                        <tr>
+
+                                            <td>
+                                                <strong>15484</strong>
+                                                <small>
+                                                    Farakka Express
+                                                </small>
+                                            </td>
+
+                                            <td>
+                                                Express
+                                            </td>
+
+                                            <td>
+                                                <span class="table-status delayed">
+                                                    DELAYED
+                                                </span>
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr>
+
+                                            <td>
+                                                <strong>12674</strong>
+                                                <small>
+                                                    Chennai Express
+                                                </small>
+                                            </td>
+
+                                            <td>
+                                                Express
+                                            </td>
+
+                                            <td>
+                                                <span class="table-status running">
+                                                    RUNNING
+                                                </span>
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr>
+
+                                            <td>
+                                                <strong>12951</strong>
+                                                <small>
+                                                    Mumbai Rajdhani
+                                                </small>
+                                            </td>
+
+                                            <td>
+                                                High
+                                            </td>
+
+                                            <td>
+                                                <span class="table-status conflict">
+                                                    CONFLICT
+                                                </span>
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr>
+
+                                            <td>
+                                                <strong>12675</strong>
+                                                <small>
+                                                    Coimbatore Express
+                                                </small>
+                                            </td>
+
+                                            <td>
+                                                Normal
+                                            </td>
+
+                                            <td>
+                                                <span class="table-status running">
+                                                    RUNNING
+                                                </span>
+                                            </td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- BLOCK STATUS -->
+
+                        <div class="card">
+
+                            <div class="card-header">
+
+                                <h2>
+                                    Block Status
+                                </h2>
+
+                                <button
+                                    class="view-button"
+                                    data-page-link="planner"
+                                >
+                                    Open planner
+                                </button>
+
+                            </div>
+
+
+                            <div class="table-container">
+
+                                <table>
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>
+                                                BLOCK
+                                            </th>
+
+                                            <th>
+                                                WINDOW
+                                            </th>
+
+                                            <th>
+                                                STATUS
+                                            </th>
+
+                                        </tr>
+
+                                    </thead>
+
+
+                                    <tbody>
+
+                                        <tr>
+
+                                            <td>
+                                                <strong>
+                                                    BLK-2026-0001
+                                                </strong>
+                                            </td>
+
+                                            <td>
+                                                Sep 3, 06:30 AM
+                                            </td>
+
+                                            <td>
+                                                <span class="table-status completed">
+                                                    COMPLETED
+                                                </span>
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr>
+
+                                            <td>
+                                                <strong>
+                                                    BLK-2026-0002
+                                                </strong>
+                                            </td>
+
+                                            <td>
+                                                Sep 3, 02:10 PM
+                                            </td>
+
+                                            <td>
+                                                <span class="table-status approved">
+                                                    APPROVED
+                                                </span>
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr>
+
+                                            <td>
+                                                <strong>
+                                                    BLK-2026-0003
+                                                </strong>
+                                            </td>
+
+                                            <td>
+                                                Sep 3, 04:30 PM
+                                            </td>
+
+                                            <td>
+                                                <span class="table-status delayed">
+                                                    PENDING
+                                                </span>
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr>
+
+                                            <td>
+                                                <strong>
+                                                    BLK-2026-0004
+                                                </strong>
+                                            </td>
+
+                                            <td>
+                                                Sep 3, 09:00 PM
+                                            </td>
+
+                                            <td>
+                                                <span class="table-status conflict">
+                                                    CONFLICT
+                                                </span>
+                                            </td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     GENERIC MODULE PAGE
+                ================================================== -->
+
+                <section
+                    id="modulePage"
+                    class="page hidden"
+                >
+
+                    <div class="module-title">
+
+                        <h2 id="moduleTitle">
+                            Module
+                        </h2>
+
+                        <p id="moduleDescription">
+                            RailBlock-AI module
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="module-grid"
+                        id="moduleGrid"
+                    >
+                    </div>
+
+                </section>
+
+
+
+
+                <!-- =================================================
+                     ACCOUNT SETTINGS
+                ================================================== -->
+
+                <section id="accountPage" class="page hidden">
+
+                    <div class="module-title">
+                        <h2>Manage Account</h2>
+                        <p>Update your profile, username, password and account information.</p>
+                    </div>
+
+                    <div class="account-layout">
+
+                        <div class="card profile-card">
+
+                            <div class="account-profile-top">
+                                <div class="large-avatar-wrap">
+                                    <img id="profilePreview" class="large-avatar hidden" alt="Profile picture">
+                                    <div id="profileFallback" class="large-avatar-fallback">👤</div>
+                                </div>
+
+                                <div>
+                                    <h2 id="accountDisplayName">User</h2>
+                                    <p id="accountRoleText">System Admin</p>
+                                    <label class="upload-button" for="profilePictureInput">
+                                        Change profile picture
+                                    </label>
+                                    <input type="file" id="profilePictureInput"
+                                           accept="image/png,image/jpeg,image/webp"
+                                           class="hidden">
+                                    <button type="button" class="text-danger-button"
+                                            id="removeProfilePicture">
+                                        Remove picture
+                                    </button>
+                                </div>
+                            </div>
+
+                            <hr class="account-divider">
+
+                            <form id="profileForm">
+
+                                <h3>Profile details</h3>
+
+                                <div class="account-form-grid">
+
+                                    <div class="form-group">
+                                        <label for="accountUsername">Username</label>
+                                        <input type="text" id="accountUsername"
+                                               minlength="3" maxlength="30" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="accountEmail">Recovery email</label>
+                                        <input type="email" id="accountEmail" required>
+                                        <small class="field-help">
+                                            Changing this email requires OTP verification sent to the new address.
+                                        </small>
+                                        <button type="button" class="verify-email-button hidden" id="verifyEmailButton">Verify new email</button>
+                                    </div>
+
+                                    <div class="form-group hidden" id="emailOtpGroup">
+                                        <label for="emailChangeOtp">Email verification OTP</label>
+                                        <input type="text" id="emailChangeOtp" inputmode="numeric" maxlength="6" placeholder="Enter 6-digit OTP">
+                                        <small class="field-help">OTP is sent to your new email and expires in 10 minutes.</small>
+                                    </div>
+
+                                </div>
+
+                                <button type="submit" class="save-account-button">
+                                    Save profile changes
+                                </button>
+
+                                <div id="profileMessage" class="account-message"></div>
+                            </form>
+
+                        </div>
+
+                        <div class="card security-card">
+
+                            <button type="button" class="security-toggle" id="securityToggle" aria-expanded="false">
+                                <span>
+                                    <strong>Security</strong>
+                                    <small>Change password and recover access</small>
+                                </span>
+                                <span class="security-toggle-icon" id="securityToggleIcon">⌄</span>
+                            </button>
+
+                            <div id="securityContent" class="security-content hidden">
+                                <form id="changePasswordForm">
+                                    <div class="form-group">
+                                        <label for="currentPassword">Current password</label>
+                                        <input type="password" id="currentPassword" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="accountNewPassword">New password</label>
+                                        <input type="password" id="accountNewPassword" minlength="6" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="accountConfirmPassword">Confirm new password</label>
+                                        <input type="password" id="accountConfirmPassword" minlength="6" required>
+                                    </div>
+
+                                    <button type="submit" class="save-account-button">Change password</button>
+                                    <button type="button" class="forgot-password-account hidden" id="accountForgotPasswordButton">Forgot password? Send OTP to recovery email</button>
+                                    <div id="passwordMessage" class="account-message"></div>
+                                </form>
+
+                                <div id="accountResetPanel" class="account-reset-panel hidden">
+                                    <h3>Reset password with email OTP</h3>
+                                    <p class="field-help">Use this if you do not remember your current password.</p>
+                                    <div class="form-group">
+                                        <label for="accountResetOtp">OTP</label>
+                                        <input type="text" id="accountResetOtp" inputmode="numeric" maxlength="6" placeholder="Enter 6-digit OTP">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="accountResetNewPassword">New password</label>
+                                        <input type="password" id="accountResetNewPassword" minlength="6">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="accountResetConfirmPassword">Confirm new password</label>
+                                        <input type="password" id="accountResetConfirmPassword" minlength="6">
+                                    </div>
+                                    <button type="button" class="save-account-button" id="accountSendResetOtp">Send OTP</button>
+                                    <button type="button" class="save-account-button secondary-account-button" id="accountVerifyResetOtp">Verify OTP & Reset Password</button>
+                                    <div id="accountResetMessage" class="account-message"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card login-history-card">
+                            <div class="card-header">
+                                <div>
+                                    <h2>Login history</h2>
+                                    <p>Recent successful sign-ins for this account.</p>
+                                </div>
+                                <span class="history-count" id="loginHistoryCount">0</span>
+                            </div>
+                            <div id="loginHistoryList" class="login-history-list"></div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     AI BLOCK PLANNER
+                ================================================== -->
+
+                <section
+                    id="plannerPage"
+                    class="page hidden"
+                >
+
+                    <div class="module-title">
+
+                        <h2>
+                            AI Block Planner
+                        </h2>
+
+                        <p>
+                            Generate an optimized maintenance
+                            block automatically.
+                        </p>
+
+                    </div>
+
+
+                    <div class="planner-card">
+
+                        <div class="planner-form">
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Track Section
+                                </label>
+
+                                <select id="trackSection">
+
+                                    <option>
+                                        CBE → CHE
+                                    </option>
+
+                                    <option>
+                                        CBE → PGT
+                                    </option>
+
+                                    <option>
+                                        PGT → SRR
+                                    </option>
+
+                                    <option>
+                                        A12 → A13
+                                    </option>
+
+                                    <option>
+                                        D18 → D19
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Maintenance Type
+                                </label>
+
+                                <select id="maintenanceType">
+
+                                    <option>
+                                        Track Inspection
+                                    </option>
+
+                                    <option>
+                                        Track Repair
+                                    </option>
+
+                                    <option>
+                                        Rail Replacement
+                                    </option>
+
+                                    <option>
+                                        Signal Maintenance
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Duration
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="duration"
+                                    value="60"
+                                    min="10"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="generate-button"
+                            id="generatePlan"
+                        >
+                            GENERATE AI BLOCK PLAN
+                        </button>
+
+
+                        <div
+                            class="ai-result"
+                            id="aiResult"
+                        >
+
+                            <h3>
+                                AI Recommendation
+                            </h3>
+
+                            <p>
+                                Click "Generate AI Block Plan"
+                                to calculate the recommended
+                                maintenance window.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
